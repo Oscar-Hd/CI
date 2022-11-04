@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RestServices } from './Vista/principal/restaurantes.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Resta';
+
+  restaurantes:any;
+
+  constructor(public rest:RestServices){}
+
+  ngOnInit()
+  {
+    this.rest.getRest().subscribe
+    ({
+      next:(r) => {this.restaurantes = r; console.log(r)},
+      error: (e) => {console.error(e)}
+    }
+    )
+  }
 }
