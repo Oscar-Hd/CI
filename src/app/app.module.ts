@@ -6,7 +6,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PrincipalComponent } from './Vista/principal/principal.component';
 import { SecundariaComponent } from './Vista/secundaria/secundaria.component';
-import { RestServices } from './Vista/principal/restaurantes.service';
+//import { RestServices } from './Vista/principal/restaurantes.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     })
   ],
   providers: [
-    RestServices
+    //RestServices
   ],
   bootstrap: [AppComponent]
 })

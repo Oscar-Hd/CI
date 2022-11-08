@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RestServices } from './Vista/principal/restaurantes.service';
+//import { RestServices } from './Vista/principal/restaurantes.service';
+import datoslocal from 'src/assets/json/datos.json';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +8,19 @@ import { RestServices } from './Vista/principal/restaurantes.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  local: any = datoslocal;
 
-  restaurantes:any;
+  //restaurantes:any;
 
-  constructor(public rest:RestServices){}
+  //constructor(public rest:RestServices){}
 
-  ngOnInit()
-  {
-    this.rest.getRest().subscribe
-    ({
-      next:(r) => {this.restaurantes = r; console.log(r)},
-      error: (e) => {console.error(e)}
-    }
-    )
-  }
+  //ngOnInit()
+  //{
+    //this.rest.getRest().subscribe
+    //({
+      //next:(r) => {this.restaurantes = r; console.log(r)},
+      //error: (e) => {console.error(e)}
+    //}
+    //)
+  //}
 }
