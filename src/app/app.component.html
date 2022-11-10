@@ -1,7 +1,17 @@
+<h1 class="mt-5">Restaurantes</h1>
+<hr>
+<input
+type="text"
+class="form-control"
+placeholder="Buscar..."
+[(ngModel)] = "filter"
+name="filter"/>
+
+
+
 <div class="container">
-  <img src="">
   <div class="row">
-    <div class="col-sm-3" *ngFor="let datos of local">
+    <div class="col-sm-3" *ngFor="let datos of local | filtro:filter">
       <div class="card" style="width: 18rem;">
         <img src="{{datos.Img}}" class="card-img-top" alt="...">
         <div class="card-body">

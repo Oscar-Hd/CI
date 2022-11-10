@@ -8,6 +8,7 @@ import datoslocal from 'src/assets/json/datos.json';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  filter = '';
   local: any = datoslocal;
 
   //restaurantes:any;

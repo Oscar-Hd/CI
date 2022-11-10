@@ -8,14 +8,18 @@ import { PrincipalComponent } from './Vista/principal/principal.component';
 import { SecundariaComponent } from './Vista/secundaria/secundaria.component';
 //import { RestServices } from './Vista/principal/restaurantes.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FiltroPipe } from './Vista/pipes/filtro.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
-    SecundariaComponent
+    SecundariaComponent,
+    FiltroPipe
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
